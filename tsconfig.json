@@ -26,8 +26,8 @@
     "typeRoots": [
       "node_modules/@types"
     ],
-    "@my/testlib": {
-      "testlib": [
+    "paths": {
+      "@my/testlib": [
         "projects/testlib/src/public_api.ts"
       ]
     }
