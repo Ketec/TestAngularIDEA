@@ -1,9 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { IdealibModule } from 'idealib';
+import { TestlibModule } from 'testlib';
 
 @NgModule({
   declarations: [
@@ -12,7 +11,7 @@ import { IdealibModule } from 'idealib';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    IdealibModule
+    TestlibModule
   ],
   providers: [],
   bootstrap: [AppComponent]

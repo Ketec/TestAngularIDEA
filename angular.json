@@ -3,23 +3,23 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "idealib": {
+    "testlib": {
       "projectType": "library",
-      "root": "projects/idealib",
-      "sourceRoot": "projects/idealib/src",
+      "root": "projects/testlib",
+      "sourceRoot": "projects/testlib/src",
       "prefix": "lib",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/idealib/ng-package.json"
+            "project": "projects/testlib/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/idealib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/testlib/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/idealib/tsconfig.lib.json"
+              "tsConfig": "projects/testlib/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
@@ -27,14 +27,14 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/idealib/src/test.ts",
-            "tsConfig": "projects/idealib/tsconfig.spec.json",
-            "karmaConfig": "projects/idealib/karma.conf.js"
+            "main": "projects/testlib/src/test.ts",
+            "tsConfig": "projects/testlib/tsconfig.spec.json",
+            "karmaConfig": "projects/testlib/karma.conf.js"
           }
         }
       }
     },
-    "IDEAshell": {
+    "shell": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -44,25 +44,25 @@
           "strict": true
         }
       },
-      "root": "projects/ideashell",
-      "sourceRoot": "projects/ideashell/src",
+      "root": "projects/shell",
+      "sourceRoot": "projects/shell/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/IDEAshell",
-            "index": "projects/ideashell/src/index.html",
-            "main": "projects/ideashell/src/main.ts",
-            "polyfills": "projects/ideashell/src/polyfills.ts",
-            "tsConfig": "projects/ideashell/tsconfig.app.json",
+            "outputPath": "dist/shell",
+            "index": "projects/shell/src/index.html",
+            "main": "projects/shell/src/main.ts",
+            "polyfills": "projects/shell/src/polyfills.ts",
+            "tsConfig": "projects/shell/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/ideashell/src/favicon.ico",
-              "projects/ideashell/src/assets"
+              "projects/shell/src/favicon.ico",
+              "projects/shell/src/assets"
             ],
             "styles": [
-              "projects/ideashell/src/styles.scss"
+              "projects/shell/src/styles.scss"
             ],
             "scripts": []
           },
@@ -82,8 +82,8 @@
               ],
               "fileReplacements": [
                 {
-                  "replace": "projects/ideashell/src/environments/environment.ts",
-                  "with": "projects/ideashell/src/environments/environment.prod.ts"
+                  "replace": "projects/shell/src/environments/environment.ts",
+                  "with": "projects/shell/src/environments/environment.prod.ts"
                 }
               ],
               "outputHashing": "all"
@@ -103,10 +103,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "IDEAshell:build:production"
+              "browserTarget": "shell:build:production"
             },
             "development": {
-              "browserTarget": "IDEAshell:build:development"
+              "browserTarget": "shell:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -114,23 +114,23 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "IDEAshell:build"
+            "browserTarget": "shell:build"
           }
         },
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "projects/ideashell/src/test.ts",
-            "polyfills": "projects/ideashell/src/polyfills.ts",
-            "tsConfig": "projects/ideashell/tsconfig.spec.json",
-            "karmaConfig": "projects/ideashell/karma.conf.js",
+            "main": "projects/shell/src/test.ts",
+            "polyfills": "projects/shell/src/polyfills.ts",
+            "tsConfig": "projects/shell/tsconfig.spec.json",
+            "karmaConfig": "projects/shell/karma.conf.js",
             "inlineStyleLanguage": "scss",
             "assets": [
-              "projects/ideashell/src/favicon.ico",
-              "projects/ideashell/src/assets"
+              "projects/shell/src/favicon.ico",
+              "projects/shell/src/assets"
             ],
             "styles": [
-              "projects/ideashell/src/styles.scss"
+              "projects/shell/src/styles.scss"
             ],
             "scripts": []
           }
@@ -138,5 +138,5 @@
       }
     }
   },
-  "defaultProject": "idealib"
+  "defaultProject": "shell"
 }
