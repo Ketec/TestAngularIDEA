@@ -138,5 +138,5 @@
       }
     }
   },
-  "defaultProject": "shell"
+  "defaultProject": "testlib"
 }
