@@ -7,7 +7,8 @@
     "inlineSources": true,
     "allowSyntheticDefaultImports": true,
     "types": [
-      "jasmine"
+      "jasmine",
+      "node"
     ],
   },
   "angularCompilerOptions": {
