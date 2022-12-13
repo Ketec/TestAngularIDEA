@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
-import { TestlibComponent } from './testlib.component';
+import { TestLibComponent } from './testlib.component';
 
 @NgModule({
   declarations: [
-    TestlibComponent
+    TestLibComponent
   ],
   exports: [
-    TestlibComponent
+    TestLibComponent
   ]
 })
-export class TestlibModule { }
+export class TestLibModule { }

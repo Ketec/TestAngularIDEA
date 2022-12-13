@@ -1,2 +1,2 @@
 export * from './lib/testlib.component';
-export { TestlibModule } from './lib/testlib.module';
+export { TestLibModule } from './lib/testlib.module';
