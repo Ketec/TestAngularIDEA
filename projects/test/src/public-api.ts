@@ -1,2 +1,3 @@
-export * from './lib/test.component';
 export { TestModule } from './lib/test.module';
+export * from './lib/directives/index';
+export * from './lib/components/index';

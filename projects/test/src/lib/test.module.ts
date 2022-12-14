@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { TestComponent } from './test.component';
+import { DirectivesModule } from './directives';
+import { ComponentsModule } from './components/components.module';
 
 @NgModule({
-  declarations: [
-    TestComponent
-  ],
-  exports: [TestComponent]
+  declarations: [],
+  imports: [ DirectivesModule, ComponentsModule ],
+  exports: [ DirectivesModule, ComponentsModule ]
 })
 export class TestModule { }
