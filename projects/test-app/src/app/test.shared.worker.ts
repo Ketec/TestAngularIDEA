@@ -1,4 +1,7 @@
 /// <reference lib="webworker" />
+export default null;
+declare var self: SharedWorkerGlobalScope;
+
 const connections: MessagePort[] = [];
 
 self.onconnect = (connectEvent: MessageEvent) => {

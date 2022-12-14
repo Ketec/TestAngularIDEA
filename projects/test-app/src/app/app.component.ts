@@ -46,6 +46,7 @@ export class AppComponent implements OnInit {
 
   postMsg() {
     this.worker.postMessage({ action: 'generateFibonacci', param: 42 });
+    this.postSharedMsg();
   }
   postSharedMsg() {
     this.sharedWorker.port.postMessage({ action: 'generateFibonacci', param: 42 });
