@@ -57,7 +57,8 @@
               "projects/test-app/src/styles.scss"
             ],
             "scripts": [],
-            "allowedCommonJsDependencies": []
+            "allowedCommonJsDependencies": [],
+            "webWorkerTsConfig": "projects/test-app/tsconfig.worker.json"
           },
           "configurations": {
             "production": {
