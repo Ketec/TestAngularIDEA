@@ -3,11 +3,11 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "testlib": {
-      "root": "projects/testlib",
-      "sourceRoot": "projects/testlib/src",
+    "test": {
+      "root": "projects/test",
+      "sourceRoot": "projects/test/src",
       "projectType": "library",
-      "prefix": "testlib",
+      "prefix": "test",
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss"
@@ -17,23 +17,23 @@
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
           "options": {
-            "project": "projects/testlib/ng-package.json"
+            "project": "projects/test/ng-package.json"
           },
           "configurations": {
             "production": {
-              "tsConfig": "projects/testlib/tsconfig.lib.prod.json"
+              "tsConfig": "projects/test/tsconfig.lib.prod.json"
             },
             "development": {
-              "tsConfig": "projects/testlib/tsconfig.lib.json"
+              "tsConfig": "projects/test/tsconfig.lib.json"
             }
           },
           "defaultConfiguration": "production"
         }
       }
     },
-    "shell": {
-      "root": "projects/shell/",
-      "sourceRoot": "projects/shell/src",
+    "test-app": {
+      "root": "projects/test-app/",
+      "sourceRoot": "projects/test-app/src",
       "projectType": "application",
       "prefix": "app",
       "schematics": {
@@ -45,16 +45,16 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/shell",
-            "index": "projects/shell/src/index.html",
-            "main": "projects/shell/src/main.ts",
-            "polyfills": "projects/shell/src/polyfills.ts",
-            "tsConfig": "projects/shell/tsconfig.app.json",
+            "outputPath": "dist/test-app",
+            "index": "projects/test-app/src/index.html",
+            "main": "projects/test-app/src/main.ts",
+            "polyfills": "projects/test-app/src/polyfills.ts",
+            "tsConfig": "projects/test-app/tsconfig.app.json",
             "assets": [
-              "./projects/shell/src/assets"
+              "./projects/test-app/src/assets"
             ],
             "styles": [
-              "projects/shell/src/styles.scss"
+              "projects/test-app/src/styles.scss"
             ],
             "scripts": [],
             "allowedCommonJsDependencies": []
@@ -95,10 +95,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "shell:build:production"
+              "browserTarget": "test-app:build:production"
             },
             "development": {
-              "browserTarget": "shell:build:development"
+              "browserTarget": "test-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -106,7 +106,7 @@
       }
     }
   },
-  "defaultProject": "testlib",
+  "defaultProject": "test",
   "cli": {
     "analytics": false
   }

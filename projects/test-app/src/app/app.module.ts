@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-// import { TestLibModule } from '../../../testlib/src/public-api';
-import { TestLibModule } from '@my/testlib';
+import { TestModule } from 'test';
 
 @NgModule({
   declarations: [
@@ -10,9 +9,8 @@ import { TestLibModule } from '@my/testlib';
   ],
   imports: [
     BrowserModule,
-    TestLibModule
+    TestModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

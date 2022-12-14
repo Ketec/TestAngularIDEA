@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'lib-test',
+  selector: 'test-component',
   template: `
     <p>
       testlib works!
     </p>
-  `,
-  styles: [
-  ]
+  `
 })
-export class TestLibComponent {}
+export class TestComponent {}
