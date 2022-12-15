@@ -4,6 +4,12 @@ import { AppComponent } from './app.component';
 import { TestModule } from 'test';
 import { WrapperComponent } from './wrapper/wrapper.component';
 import { RouterModule } from '@angular/router';
+import { loadRemoteModule } from '@angular-architects/module-federation';
+
+
+function createRemoteUrl(port: number): string {
+  return window.location.protocol + '//' + window.location.hostname + ':' + port + '/remoteEntry.js';
+}
 
 @NgModule({
   declarations: [
@@ -26,11 +32,15 @@ import { RouterModule } from '@angular/router';
         },
         {
           path: 'test',
-          loadChildren: () => import('TestRemoteApp/Module').then(m => m.AppModule)
-        },
+          loadChildren: () => loadRemoteModule({
+            type: 'module',
+            remoteEntry: createRemoteUrl( 4401),
+            exposedModule: './Module'
+          }).then(m => m.AppModule)
+        }
       ]
     )
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
