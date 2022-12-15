@@ -24,6 +24,10 @@ import { RouterModule } from '@angular/router';
           path: 'demo',
           loadChildren: () => import('./subdir/subdir.module').then(m => m.SubdirModule)
         },
+        {
+          path: 'test',
+          loadChildren: () => import('TestRemoteApp/Module').then(m => m.AppModule)
+        },
       ]
     )
   ],

@@ -27,7 +27,9 @@
       "node_modules/@types"
     ],
     "paths": {
-      "test": ["projects/test/src/public-api.ts"]
+      "test": [
+        "projects/test/src/public-api.ts"
+      ]
     }
   },
   "angularCompilerOptions": {
