@@ -1,2 +1,15 @@
-<router-outlet></router-outlet>
-<button (click)="postMsg()">test</button>
+<div style="display: flex; overflow: hidden; height: 100%">
+  <div style="width: 400px; background: lightgray; padding: 16px;">
+    <div
+      style="border: 1px solid black; border-radius: 3px; background: lightblue; padding: 8px 16px; cursor: pointer;"
+      [routerLink]="'demo'"
+    >Local route</div>
+    <div
+      style="border: 1px solid black; border-radius: 3px; background: lightblue; padding: 8px 16px; cursor: pointer; margin-top: 16px;"
+      [routerLink]="'test'"
+    >Remote microservice route</div>
+  </div>
+  <div style="width: 100%">
+    <router-outlet></router-outlet>
+  </div>
+</div>
