@@ -58,7 +58,6 @@
 						],
 						"scripts": [],
 						"allowedCommonJsDependencies": [],
-						"webWorkerTsConfig": "projects/test-app/tsconfig.worker.json",
 						"extraWebpackConfig": "projects/test-app/webpack.config.js",
 						"commonChunk": false
 					},
