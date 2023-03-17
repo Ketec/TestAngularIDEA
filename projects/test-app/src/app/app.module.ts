@@ -1,27 +1,15 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
-import { RouterModule } from '@angular/router';
+import { WrapperComponent } from './wrapper/wrapper.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    WrapperComponent
   ],
   imports: [
-    BrowserModule,
-    RouterModule.forRoot(
-      [
-        {
-          path: '',
-          pathMatch: 'full',
-          redirectTo: 'demo'
-        },
-        {
-          path: 'demo',
-          loadChildren: () => import('./subdir/subdir.module').then(m => m.SubdirModule)
-        },
-      ]
-    )
+    BrowserModule
   ],
   bootstrap: [AppComponent]
 })
